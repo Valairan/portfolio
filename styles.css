@@ -327,10 +327,9 @@ html {
 /* Mobile message styles */
 .mobile-message {
     position: fixed;
-    top: 0;
-    left: 0;
+    height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: linear-gradient(135deg, #000618, #001353, #014b7c, #212233);
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -340,11 +339,16 @@ html {
 
 .mobile-message p {
     margin: 0;
-    font-size: 18px;
+    font-size: x-large;
 }
 
 /* Show mobile message for small screens */
 @media (max-width: 768px) {
+
+    .main-content{
+        display: none;
+    }
+
     .mobile-message {
         display: block;
     }
