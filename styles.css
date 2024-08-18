@@ -26,7 +26,8 @@ body, html {
 }
 
 #section1 {
-    background-image: url(assets/Pupshoot-portfolio-testpage.png);
+    background-image: url(assets/Pupshoot-portfolio-testpage.png) no-repeat;
+    background-size: 100%;
 }
 
 #section2 {
