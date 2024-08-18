@@ -36,3 +36,25 @@ window.addEventListener("scroll", function() {
         dots[currentIndex].classList.add("active");
     }
 });
+// Tab functionality
+document.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', function() {
+        const tabId = this.getAttribute('data-tab');
+
+        // Remove active class from all buttons and panes
+        document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.tab-pane').forEach(pane => {
+            // Ensure all panes are hidden
+            pane.classList.remove('active');
+            pane.style.opacity = 0;
+        });
+
+        // Add active class to the clicked button and corresponding pane
+        this.classList.add('active');
+        const activePane = document.getElementById(tabId);
+        activePane.classList.add('active');
+        // Trigger reflow to apply opacity transition
+        activePane.offsetHeight; // Trigger a reflow
+        activePane.style.opacity = 1;
+    });
+});

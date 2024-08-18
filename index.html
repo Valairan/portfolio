@@ -1,26 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sticky Scroller with Navigation</title>
+    <title>DARYL VALAIRAN</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-        <div class="section" id="section1">
-            <h1>Section 1</h1>
-            <p>This is the first section.</p>
-        </div>
-        <div class="section" id="section2">
-            <h1>Section 2</h1>
-            <p>This is the second section.</p>
-        </div>
 
+<body>
     <nav class="dot-nav">
         <a href="#section1" class="dot"></a>
         <a href="#section2" class="dot"></a>
     </nav>
+    <div class="gradient">
+        <div class="section open-sans-google-font" id="section1">
+            <div class="center-align" style="font-size: 256px; font-weight: 600;">Corgi Kickoff</div>
+            <div class="sticky-bottom fs-large" style="bottom: 64px;">
+                Coming Soon...<br><br>
+                <div class="tab-buttons">
+                    <button style="background: #00000000; border: none !important;"><img src="assets/SteamPadding.png"
+                            class="button-twin" style="border-radius: 20px 0px 0px 20px;"></button>
+                    <button style="background: #00000000; border: none !important;"><img src="assets/NintendoSwitch.png"
+                            class="button-twin" style="border-radius: 0px 20px 20px 0px;"></button>
+                </div>
+            </div>
+            <div class="sticky-bottom open-sans-google-font fs-large">
+                <div class="groShrin">
+                    <a href="#section2">
+                        Scroll down for portfolio
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="section open-sans-google-font " id="section2">
+            <div class="sticky-top center-align">
+                <h1>Daryl Valairan Ramesh<br></h1>
+                XR developer<br>
+                darylvalairan@outlook.com<br><br>
+                <a href="https://github.com/Valairan" target="_blank"><img src="assets/github.png" class="fav-icon"></a>
+                <a href="https://www.linkedin.com/in/daryl-valairan-78792a231/" target="_blank"><img
+                        src="assets/linkedin.png" class="fav-icon"></a>
+                <a href="https://store.steampowered.com/" target="_blank"><img src="assets/steam.png"
+                        class="fav-icon"></a><br>
+                <div style="text-align:start;">
+                    <br>Software Engineer with an interest in games and mobile apps.<br>
+                    Writing clean code since 2015.<br>
 
-    <script src="scripts.js"></script>
+                </div>
+            </div>
+            <div class="tabs tabbed-section" style="top: 350px;">
+                <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="tab1">Experience</button>
+                    <button class="tab-button" data-tab="tab2">Projects</button>
+                    <button class="tab-button" data-tab="tab3">Education</button>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab1">
+                        <h2>ModiFace — May 2022 - July 2024 </h2>
+                        <p>Social Effects Developer, Software Developer</p>
+                        <div style="text-align:left;">
+                            As a full-stack developer at Modiface, I specialized in creating immersive websites with
+                            advanced
+                            generative
+                            AI
+                            models for language and image processing. I lead AR projects focusing on face and hair
+                            renderings,
+                            refining
+                            templates for one-stop AR product generation. I also developed shader code for AR
+                            applications
+                            resulting
+                            in
+                            a
+                            much more realistic rendering of makeup. In a scrum-style environment, I collaborated with
+                            my
+                            team
+                            using
+                            tools
+                            like Jira, ServiceNow, and Notion.
+                            <br>[https://www.loreal.com/en/articles/science-and-technology/beauty-genius/]
+                        </div>
+
+                        <h2> Tata Consultancy Services — May 2021 - June 2021</h2>
+                        <p>Intern</p>
+                        <div style="text-align:left;">
+                            I lead projects and my team in developing Indoor Navigation, Autorepair, and other AR
+                            products as
+                            part
+                            of
+                            the
+                            CBOT laboratory team, using Unity, Vuforia, and Placenote. I also developed the AR pipeline
+                            for
+                            storing
+                            location
+                            data efficiently in the cloud. Indoor Navigation was my own idea that was absorbed into the
+                            company
+                            after my
+                            participation in Inframind 2019.
+                            <br>[https://smvec.ac.in/tcs-inframind-2019/]
+                        </div>
+                        <h2>Independant Software Consultant — 2018 - present</h2>
+                        <p>Web, Mobile and Embedded Application Developer</p>
+                        <div style="text-align:left;">
+                            I was a consultant and advisor to Indie game studios and other organizations where Unity and
+                            the
+                            .NET
+                            framework
+                            were part of the tech stack.
+                        </div>
+                        <h2>Indie Game Developer — 2018 - present</h2>
+                        <p>Unity, Godot</p>
+                        <div style="text-align:left;">
+                            Full Stack Game Developer specializing in developing prototypes and vertical slices
+                            that clients can exhibit to investors. Was also done in short periods of time, usually
+                            two to three weeks.
+                        </div>
+                    </div>
+
+
+                    <!-- ------------------------------------------------------- -->
+
+                    <div class="tab-pane" id="tab2">
+                        <h2>Procedural Planet Generation</h2>
+                        <div style="text-align:left;">
+                            A procedural planet generation system that can generate planets, atmospheres, and cloud
+                            layers and calculate accurate gravity based on the planet’s mass. The system was made for
+                            Unity, and runs entirely on the CPU, and is very performant.<br>
+                            [https://github.com/jecker7/nifti-pg]
+                        </div>
+
+                        <h2>Procedural Building Generation</h2>
+                        <div style="text-align:left;">
+                            A building generation system that can generate multi-storeyed buildings, with random
+                            configurations. The system can calculate where doors and windows are, to avoid blocking them
+                            and guarantee that all doors are connected to a room and that all rooms are accessible.
+                        </div>
+
+                        <h2>Indoor Navigation Using AR</h2>
+                        <div style="text-align:left;">
+                            An AR application that can guide users to their destination from their location, in an AR
+                            space. Arrows are rendered in realtime in AR, based on maps built in advance, and the
+                            shortest path to the destination is calculated based on the user’s location. The app stores
+                            map data in the cloud and can dynamically fetch them as needed.<br>
+                            [https://github.com/Valairan/iOSReadyNavigation]
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- ------------------------------------------------------- -->
+
+
+                    <div class="tab-pane" id="tab3">
+                        <br><br><b>Harvard University</b>— CS50: Introduction to Computer Science, 2024
+                        <br><br><b>Harvard University</b>— CS50 For Lawyers, 2024
+                        <br><br><b>Harvard University</b>— Using Python for Research, 2024
+                        <br><br><b>Harvard University</b>— CS50: Introduction to Artificial Intelligence with Python, 2024
+                        <br><br><b>Georgian College</b> — Diploma, Mobile Application Development, 2022
+                        <br><br><b>Sri Manakula Vinayagar Engineering College</b> — Bachelor of Technology, Computer Science and Engineering, 2021
+                        <br><br><b>Petit Seminaire Higher Secondary School</b> — Higher Secondary, 2017
+                        <br><br><b>Petit Seminaire Higher Secondary School</b> — Secondary School Leaving Certificate, 2015
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+
+        <script src="scripts.js"></script>
 </body>
+
 </html>
