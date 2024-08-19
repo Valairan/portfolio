@@ -64,23 +64,33 @@ a {
     /* no underline */
 }
 
+@property --gradient-angle {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
 .gradient {
-    backdrop-filter: blur(10px);
-    background: linear-gradient(135deg, #000618, #001353, #014b7c, #212233);
+    --a: 135deg;
+    backdrop-filter: blur(20px);
+    background: linear-gradient(var(--gradient-angle), #380009, #001353, #014b7c, #004d2f);
     background-size: 400% 400%;
-    animation: backgroundAnimation 50s infinite alternate;
+    animation: backgroundAnimation 60s infinite alternate;
 }
 
 @keyframes backgroundAnimation {
     0% {
+        --gradient-angle:0deg;
         background-position: 0% 0%;
     }
 
     50% {
+        --gradient-angle:180deg;
         background-position: 100% 100%;
     }
 
     100% {
+        --gradient-angle:360deg;
         background-position: 0% 0%;
     }
 }
@@ -105,6 +115,7 @@ a {
 .button-twin:hover {
     transform: scale(1.2);
 }
+
 .fav-icon:hover {
     transform: scale(1.2);
 }
@@ -333,7 +344,8 @@ html {
     color: #fff;
     text-align: center;
     padding: 20px;
-    display: none; /* Hidden by default */
+    display: none;
+    /* Hidden by default */
     z-index: 1000;
 }
 
@@ -345,7 +357,7 @@ html {
 /* Show mobile message for small screens */
 @media (max-width: 768px) {
 
-    .main-content{
+    .main-content {
         display: none;
     }
 
