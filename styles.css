@@ -64,6 +64,10 @@ a {
     /* no underline */
 }
 
+.header-scale{
+    font-size: clamp(1.5rem, 4vw, 3rem);
+}
+
 @property --gradient-angle {
     syntax: '<angle>';
     inherits: false;
