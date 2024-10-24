@@ -392,6 +392,7 @@ html {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    min-height: 40vh;
 }
 
 .card:hover {
