@@ -5,6 +5,7 @@ html {
     margin: 0;
     padding: 0;
     height: 100%;
+    width: 100%;
 }
 
 .open-sans-google-font {
@@ -368,4 +369,64 @@ html {
     .mobile-message {
         display: block;
     }
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    --border-width: 4px;
+    --radius: 24px;
+    background-color: rgb(255, 255, 255);
+    border: var(--border-width) solid;
+    border-image: conic-gradient(from var(--angle), #003ab6 80%, #ff0062 88%, rgb(95, 0, 59) 92%, #1d3e6a 100%) 1;
+    animation: spin 3s linear infinite paused;
+    border-image-slice: 1;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.);
+    transition: transform 0.2s;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    animation-play-state: running;
+  }
+  
+@property --angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+  }
+
+@keyframes spin {
+    to {
+      --angle: 1turn;
+    }
+  }
+.card img {
+    align-self: center;
+    max-width: 25vw;
+    height: auto;
+    border-radius: 8px 8px 0 0; /* Rounded corners at the top */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    margin: 15px 0 10px;
+    font-size: 24px;
+    color: #000000;
+}
+
+.card p {
+    font-size: 16px;
+    color: #000000;
 }
