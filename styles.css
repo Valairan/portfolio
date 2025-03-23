@@ -1,6 +1,5 @@
 /* styles.css */
 
-body,
 html {
     margin: 0;
     padding: 0;
@@ -8,15 +7,18 @@ html {
     width: 100%;
 }
 
-.open-sans-google-font {
-    color: #fff;
-    font-family: "Open Sans", system-ui;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: var(--ds-typography-main-font-family, system-ui);
+    font-size: var(--ds-typography-main-font-size, 1rem);
+    color: var(--ds-typography-main-color, #FFFFFF);
+    line-height: var(--ds-typography-main-line-height, 1.75);
 }
+
+
 
 /* Define the keyframes for the animation */
 @keyframes growShrink {
@@ -61,7 +63,7 @@ a {
     /* no underline */
 }
 
-.header-scale{
+.header-scale {
     font-size: clamp(1.5rem, 4vw, 3rem);
 }
 
@@ -81,17 +83,17 @@ a {
 
 @keyframes backgroundAnimation {
     0% {
-        --gradient-angle:0deg;
+        --gradient-angle: 0deg;
         background-position: 0% 0%;
     }
 
     50% {
-        --gradient-angle:180deg;
+        --gradient-angle: 180deg;
         background-position: 100% 100%;
     }
 
     100% {
-        --gradient-angle:360deg;
+        --gradient-angle: 360deg;
         background-position: 0% 0%;
     }
 }
@@ -102,6 +104,24 @@ a {
     height: 32px;
     transition: transform 0.2s ease-in-out;
 }
+
+button {
+    border: none;
+    background-color: #000000;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #010F00;
+}
+
 
 .button-twin {
     margin: 8px;
@@ -179,16 +199,16 @@ a {
 html {
     scroll-behavior: smooth;
 }
-.tabs-parent{
+
+.tabs-parent {
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items:center;
-    align-self:auto;
+    align-items: center;
+    align-self: auto;
     width: 100%;
-    height: 50%;
-    margin: 8%;
-
 }
+
 .tabbed-section {
     font-size: 60%;
     height: fit-content;
@@ -198,15 +218,16 @@ html {
     align-items: center;
     justify-content: center;
 }
+
 .tabs {
     width: 100%;
     /* Adjust as needed */
-    max-width: 70vw;
+    max-width: 80vw;
     /* Adjust as needed */
     text-align: center;
     cursor: pointer;
     z-index: 2;
-    margin-top: 8%;
+    margin-top: 4vh;
 }
 
 .tab-buttons {
@@ -234,7 +255,7 @@ html {
 .tab-button.active {
     font-weight: 400;
     font-size: 18px;
-    background: #014b7c;
+    background: #017C4D;
     color: #fff;
 }
 
@@ -242,7 +263,7 @@ html {
     display: block;
     align-items: left;
     min-width: 70%;
-    height: fit-content;
+    height: 1vh;
 }
 
 .tab-pane {
@@ -257,6 +278,24 @@ html {
     display: block;
     opacity: 1;
 
+}
+
+.top-fixed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.content {
+    margin-top: 50px;
+    overflow: hidden;
+    /* Pushes other content below the fixed div */
 }
 
 .fs-large {
@@ -410,30 +449,32 @@ html {
     display: flex;
     flex-direction: column;
     min-height: 48vh;
-    height:fit-content;
+    height: fit-content;
     width: 24vw;
 }
 
 .card:hover {
     animation-play-state: running;
-  }
-  
+}
+
 @property --angle {
     syntax: "<angle>";
     inherits: true;
     initial-value: 0turn;
-  }
+}
 
 @keyframes spin {
     to {
-      --angle: 1turn;
+        --angle: 1turn;
     }
-  }
+}
+
 .card img {
     align-self: center;
     max-width: 25vw;
     height: auto;
-    border-radius: 8px 8px 0 0; /* Rounded corners at the top */
+    border-radius: 8px 8px 0 0;
+    /* Rounded corners at the top */
 }
 
 .card:hover {
