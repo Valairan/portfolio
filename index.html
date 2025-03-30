@@ -12,6 +12,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DARYL VALAIRAN</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        window.onload = function() {
+            fetch("https://countvisits-z7m7jvai5q-uc.a.run.app", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ location: "homepage" })
+            })
+            .then(response => response.json())
+            .then(data => console.log("Visit counted:", data))
+            .catch(error => console.error("Error:", error));
+        };
+    </script>
 </head>
 
 <body>
@@ -185,6 +199,7 @@
                                 <br>
                                 Made with love, in Canada.
                                 <br>
+                                [React Native, Expo, Js, Firebase RTDB, Firebase Cloud Functions, Google Cloud Platform,Mapbox, Jenkins]
                                 <a href="https://www.tiramesu.ca/" target="_blank"
                                     style="color: #ff0000;">[https://www.tiramesu.ca/]</a>
                             </div>
@@ -193,6 +208,8 @@
                             <div style="padding-left: 16px; padding-right: 16px;">
                                 My attempt to tackle the housing market. Current tenants can list their current
                                 apartment to find a lease takeover, or a sublet.
+                                <br>
+                                [React Native, PHP, Laravel, Aws λ, MongoDB, Jenkins]
                                 <br>
                                 <a href="https://github.com/Valairan/FlatSwap" target="_blank"
                                     style="color: #ff0000;">[https://github.com/Valairan/FlatSwap]</a>
@@ -207,6 +224,7 @@
                                 Each pup is brimming with personality, from their wiggly tails to their floppy ears, and
                                 every goal is a celebration of pure puppy joy.
                                 <br>
+                                [Unity, C#, Aws λ, MongoDB, GitLab CI/CD]
                                 <a href="https://valairan.itch.io/corgi-kickoff" target="_blank"
                                     style="color: #ff0000;">[https://valairan.itch.io/corgi-kickoff]</a>
                                 <br>
