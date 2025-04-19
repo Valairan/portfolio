@@ -13,19 +13,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DARYL VALAIRAN</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            console.log("Function call")
-            fetch("https://countvisits-z7m7jvai5q-uc.a.run.app", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({ "data": { "location": "homepage" } })
-            })
-                .catch(error => console.error("Error:", error));
-        });
-    </script>
 </head>
 
 <body>
