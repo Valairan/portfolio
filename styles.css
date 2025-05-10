@@ -78,6 +78,10 @@ a {
 }
 
 .gradient {
+    background-color:'#28251F';
+}
+
+.gradient-old {
     --a: 135deg;
     backdrop-filter: blur(20px);
     background: linear-gradient(var(--gradient-angle), #380009, #001353, #014b7c, #004d2f);
@@ -123,7 +127,7 @@ button {
 }
 
 button:hover {
-    background-color: #010F00;
+    background-color: #fff;
 }
 
 
@@ -250,10 +254,10 @@ html {
     padding: 10px 20px;
     border: none;
     background: #ccc;
-    color: #333;
+    color: #000;
     cursor: pointer;
     margin-right: 5px;
-    transition: font-weight 0.5s, font-size 0.5s, background 0.7s;
+    transition: font-weight 0.9s, font-size 0.9s, background 0.2s;
 }
 
 .tab-button.active {
