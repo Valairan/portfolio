@@ -78,7 +78,11 @@ a {
 }
 
 .gradient {
-    background-color:'#28251F';
+    background: #020024;
+    height: fit-content;
+    background: linear-gradient(var(--gradient-angle), rgba(2, 0, 36, 1) 0%, rgb(9 0 29) 59%, rgb(3 0 29) 65%, rgb(0 20 39) 100%);
+    animation: backgroundAnimation 10s infinite alternate;
+
 }
 
 .gradient-old {
