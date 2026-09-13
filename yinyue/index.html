@@ -56,13 +56,13 @@
           <img src="assets/icons/app-window.svg" alt="" class="button__icon">
           Download for Windows
         </a>
-        <a class="button button--ghost" href="downloads/Yinyue-0.2.0.dmg" download>
+        <a class="button button--ghost" href="downloads/Yinyue-0.2.0-arm64.dmg" download data-mac-download>
           <img src="assets/icons/apple.svg" alt="" class="button__icon">
           Download for macOS
         </a>
       </div>
       <p class="hero__meta">
-        v0.2.0 · free and open source · Windows 10 and 11 now, macOS next<br>
+        v0.2.0 · free and open source · Windows 10 and 11 · macOS 13 and later<br>
         <a class="muted" href="https://github.com/Valairan/yinyue" rel="noopener">Source on GitHub</a>
       </p>
     </section>
@@ -173,16 +173,32 @@
           </dl>
         </article>
 
-        <article class="platform platform--soon">
+        <article class="platform" data-mac-files
+                 data-file-arm64="downloads/Yinyue-0.2.0-arm64.dmg"
+                 data-file-x64="downloads/Yinyue-0.2.0-x64.dmg">
           <h3>macOS</h3>
-          <p class="platform__meta">In development · same features, native menu-bar app</p>
-          <a class="button button--ghost" href="downloads/Yinyue-0.2.0.dmg" download>
-            <img src="assets/icons/apple.svg" alt="" class="button__icon">
-            Download for macOS
-          </a>
+          <p class="platform__meta">Version 0.2.0 · Disk image · about 44 MB · macOS 13 and later</p>
+          <div class="download-row">
+            <a class="button button--primary" href="downloads/Yinyue-0.2.0-arm64.dmg" download data-mac-download>
+              <img src="assets/icons/apple.svg" alt="" class="button__icon">
+              Download for macOS
+            </a>
+            <!-- One build per processor. The toggle picks which file every macOS button hands out. -->
+            <div class="segmented" role="group" aria-label="Which Mac">
+              <button type="button" data-mac-arch="arm64" aria-pressed="true">Apple silicon</button>
+              <button type="button" data-mac-arch="x64" aria-pressed="false">Intel</button>
+            </div>
+          </div>
+          <p class="platform__hint">
+            Downloading the <strong data-mac-arch-name>Apple silicon</strong> build. Not sure which you have?
+            Apple menu → About This Mac says “Chip” for Apple silicon and “Processor” for Intel.
+          </p>
+          <noscript><p class="platform__hint">Intel Mac: <a href="downloads/Yinyue-0.2.0-x64.dmg" download>Yinyue-0.2.0-x64.dmg</a></p></noscript>
           <dl class="facts">
-            <div><dt>Will need</dt><dd>macOS 13 or later on Apple silicon or Intel.</dd></div>
-            <div><dt>Progress</dt><dd>The overlay, search, queue, toasts, sleep timer, settings and global hotkeys are done. Follow the <a href="https://github.com/Valairan/yinyue" rel="noopener">repository</a> for the release.</dd></div>
+            <div><dt>Requires</dt><dd>macOS 13 or later. Apple silicon means an M1 or later chip; every other Mac is Intel.</dd></div>
+            <div><dt>Install</dt><dd>Open the disk image and drag Yinyue to Applications. It lives in the menu bar; there is nothing else to set up.</dd></div>
+            <div><dt>SHA-256</dt><dd>Apple silicon <code class="hash">e5a8aa379c8a1e40adf2dd10232eb8e0c0ec47ab68a6ef7249d22bccb57d2be7</code><br>Intel <code class="hash">f2bc8593be46aa8bff3f1726582d3ae141d73d0267027bc5036d2ff3b60b763c</code></dd></div>
+            <div><dt>Unsigned</dt><dd>macOS will say it cannot verify the developer. Right-click Yinyue and choose Open the first time; after that it opens normally.</dd></div>
           </dl>
         </article>
       </div>
